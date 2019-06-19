@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seal Report</title>
-    <link>/python-test/</link>
+    <link>/</link>
     <description>Recent content on Seal Report</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Jun 2019 23:03:59 +0800</lastBuildDate>
     
-	<atom:link href="/python-test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>windows用户在 htdigest 认证模式下，域怎么填</title>
-      <link>/python-test/posts/htdigest/</link>
+      <link>/posts/htdigest/</link>
       <pubDate>Sun, 16 Jun 2019 23:03:59 +0800</pubDate>
       
-      <guid>/python-test/posts/htdigest/</guid>
+      <guid>/posts/htdigest/</guid>
       <description>正在搞鼓一个 web server, 需要在底层用到用户认证，我选择 linux 下面的 htdigest 认证标准；据说它只发送hash值 很难破译
 但是遇到个小问题 认证需要提交我的域 我的个人电脑并没有加入域 认证失败
 不管是留空还是乱填个 QQ.COM 都没用
@@ -25,10 +25,10 @@
     
     <item>
       <title>第二章 基础图表</title>
-      <link>/python-test/posts/art_01/</link>
+      <link>/posts/art_01/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0800</pubDate>
       
-      <guid>/python-test/posts/art_01/</guid>
+      <guid>/posts/art_01/</guid>
       <description>该软件自带许多范例但是我们不管它，直接自己开个新的空白文件
 数据源已经在 Seal Server Manager 里面设置好了 它给我们设置了两个数据源 我也不知道该怎么删掉一个 （RSS的那个已经失效了）
 还是老规矩使用北风公司的数据就好了 我们直接开始搞吧
@@ -44,10 +44,10 @@
     
     <item>
       <title>Seal Report 学习笔记</title>
-      <link>/python-test/about/</link>
+      <link>/about/</link>
       <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/python-test/about/</guid>
+      <guid>/about/</guid>
       <description>Hi there 无意中看见一款自助式 BI， C# 开发 而且是开源、免费。
 安装包只有15兆，.NET 库 另算。但运行起来已经是飞快的了；渲染方面，默认只配给你HTML，其他的都是商业产品，没法配。
 可以支持PDF EXCEL 等格式。感觉极好！
@@ -61,10 +61,10 @@ Seal Report 不是一个面向办公室人员的软件，对新手并不友好�
     
     <item>
       <title>第一章 下载和安装</title>
-      <link>/python-test/posts/hello/</link>
+      <link>/posts/hello/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/python-test/posts/hello/</guid>
+      <guid>/posts/hello/</guid>
       <description>1 我们去 https://sealreport.org 下载即可，自己去找 DownLoad。 分 32位和64位 ，因为是 C# ，所以只有windows平台, 同时还提供源码下载。
 下载后，双击即可完成安装，非常的给力。
 2 安装后出现两个图标
@@ -79,10 +79,10 @@ Seal Report 不是一个面向办公室人员的软件，对新手并不友好�
     
     <item>
       <title>Showcase</title>
-      <link>/python-test/showcase/</link>
+      <link>/showcase/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/python-test/showcase/</guid>
+      <guid>/showcase/</guid>
       <description>Header 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.</description>
     </item>
     

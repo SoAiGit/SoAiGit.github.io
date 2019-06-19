@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Seal Report</title>
-    <link>/python-test/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Seal Report</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Jun 2019 23:03:59 +0800</lastBuildDate>
     
-	<atom:link href="/python-test/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>htdigest</title>
-      <link>/python-test/tags/htdigest/</link>
+      <link>/tags/htdigest/</link>
       <pubDate>Sun, 16 Jun 2019 23:03:59 +0800</pubDate>
       
-      <guid>/python-test/tags/htdigest/</guid>
+      <guid>/tags/htdigest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BI</title>
-      <link>/python-test/tags/bi/</link>
+      <link>/tags/bi/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0800</pubDate>
       
-      <guid>/python-test/tags/bi/</guid>
+      <guid>/tags/bi/</guid>
       <description></description>
     </item>
     

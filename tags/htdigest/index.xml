@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>htdigest on Seal Report</title>
-    <link>/python-test/tags/htdigest/</link>
+    <link>/tags/htdigest/</link>
     <description>Recent content in htdigest on Seal Report</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 16 Jun 2019 23:03:59 +0800</lastBuildDate>
     
-	<atom:link href="/python-test/tags/htdigest/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/htdigest/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>windows用户在 htdigest 认证模式下，域怎么填</title>
-      <link>/python-test/posts/htdigest/</link>
+      <link>/posts/htdigest/</link>
       <pubDate>Sun, 16 Jun 2019 23:03:59 +0800</pubDate>
       
-      <guid>/python-test/posts/htdigest/</guid>
+      <guid>/posts/htdigest/</guid>
       <description>正在搞鼓一个 web server, 需要在底层用到用户认证，我选择 linux 下面的 htdigest 认证标准；据说它只发送hash值 很难破译
 但是遇到个小问题 认证需要提交我的域 我的个人电脑并没有加入域 认证失败
 不管是留空还是乱填个 QQ.COM 都没用
