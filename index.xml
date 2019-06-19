@@ -1,57 +1,88 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Terminal</title>
-    <link>/</link>
-    <description>Recent content on Terminal</description>
+    <title>Seal Report</title>
+    <link>/python-test/</link>
+    <description>Recent content on Seal Report</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 11 Jun 2019 23:09:18 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jun 2019 23:03:59 +0800</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/python-test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>新文章测试</title>
-      <link>/posts/art_01/</link>
-      <pubDate>Tue, 11 Jun 2019 23:09:18 +0800</pubDate>
+      <title>windows用户在 htdigest 认证模式下，域怎么填</title>
+      <link>/python-test/posts/htdigest/</link>
+      <pubDate>Sun, 16 Jun 2019 23:03:59 +0800</pubDate>
       
-      <guid>/posts/art_01/</guid>
-      <description>用Hugo做了个静态blog；自己做的一些python学习片段 存放在 PYTHON 目录下； 其他文件全是HTML BLOG。
- 01 XLSX 的读写
-为了在windows下面使用彩色字符，需要安装 colorama 库，这个库跟excel无关
- 02 Send mail
-python 3 的默认库自带有 mail client，如果没有安装则不能发邮件
-  </description>
+      <guid>/python-test/posts/htdigest/</guid>
+      <description>正在搞鼓一个 web server, 需要在底层用到用户认证，我选择 linux 下面的 htdigest 认证标准；据说它只发送hash值 很难破译
+但是遇到个小问题 认证需要提交我的域 我的个人电脑并没有加入域 认证失败
+不管是留空还是乱填个 QQ.COM 都没用
+后来换成IE再去试 提示我是 mydomain.com 按照这个来生产 htdigest 文件才算通过了。</description>
     </item>
     
     <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      <title>第二章 基础图表</title>
+      <link>/python-test/posts/art_01/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0800</pubDate>
       
-      <guid>/about/</guid>
-      <description>Hi there My name is Radek and I&amp;rsquo;m the author of this theme. I made it to help you present your ideas easier.
-We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
-This theme is pretty basic and covers all of the essentials. All you have to do is start typing!</description>
+      <guid>/python-test/posts/art_01/</guid>
+      <description>该软件自带许多范例但是我们不管它，直接自己开个新的空白文件
+数据源已经在 Seal Server Manager 里面设置好了 它给我们设置了两个数据源 我也不知道该怎么删掉一个 （RSS的那个已经失效了）
+还是老规矩使用北风公司的数据就好了 我们直接开始搞吧
+ 右键点击 RRS no sql source 删除， 我们不需要这个数据源 要建立图表 首先要有数据模型 这是告诉数据库 我们要如何地显示数据 现在我们要考核员工的业务能力 那么肯定是要看到每一个员工的数据 不能跟别人重叠 然后指标是营业额(历年来的总和) 同时我还想看到他们的成绩按每年来划分，好让我知道他们那一年最给力，现在是进步了还是退步了 这是很简单的报表要求 很明显 重叠式柱图是最直观的 一共有上面描述的三个维度 在左边的 树状栏 ，我们选择 Models &amp;ndash; model, 然后我们给它换个名字 鼠标左键点一下即可
+ 接着去 clause 栏，找到我们想要的数据 并拖到 elements 栏中
+ 员工的姓名是我们需要分开统计的的， 拖过去ROW栏
+ 营业额(order details &amp;ndash; amount)是核心数据 所以拖入DATA栏
+ 业务时间是用来分割营业额的 所以拖入COL栏
+ 为了能够一步一步讲解制作过程，我们去把默认的设置都删掉，把Views - View 下面的都删掉
+ 右键点击 View 建立一个数据模型的视图
+ 点击新出现的 Views - View - Model 给它改个新名字 业绩视图</description>
     </item>
     
     <item>
-      <title>Hello Friend</title>
-      <link>/posts/hello/</link>
+      <title>Seal Report 学习笔记</title>
+      <link>/python-test/about/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/python-test/about/</guid>
+      <description>Hi there 无意中看见一款自助式 BI， C# 开发 而且是开源、免费。
+安装包只有15兆，.NET 库 另算。但运行起来已经是飞快的了；渲染方面，默认只配给你HTML，其他的都是商业产品，没法配。
+可以支持PDF EXCEL 等格式。感觉极好！
+所以我决定把学习的过程记录下来。
+ 该软件给我的初步感觉，上手比 tableau 难很多，那个东西我不看指南都能搞定。 如果你不介意用破解软件，那么tableau真的很好。
+Seal Report 不是一个面向办公室人员的软件，对新手并不友好；它更加适合开发人员，尤其对数据库领域有比较高的要求。
+然后让熟悉业务的人来给你提要求，这样才能做出高质量的报表，否则还不如用 EXCEL
+最后，这个东西还支持定时器，可以让你稳定更新 HTML 文件； 那么，配合web server，可以实现定时更新并分享。
+以上就是我的初步感受。</description>
+    </item>
+    
+    <item>
+      <title>第一章 下载和安装</title>
+      <link>/python-test/posts/hello/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/hello/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.
- Fusce pharetra suscipit orci nec tempor.</description>
+      <guid>/python-test/posts/hello/</guid>
+      <description>1 我们去 https://sealreport.org 下载即可，自己去找 DownLoad。 分 32位和64位 ，因为是 C# ，所以只有windows平台, 同时还提供源码下载。
+下载后，双击即可完成安装，非常的给力。
+2 安装后出现两个图标
+ Seal Server Manager
+用于管理数据源
+ Seal Report Designer
+用于设计报表
+  安装时建议顺带安装演示数据库和演示报表，方便你学习，自带的数据库是大家熟悉的 Northwind.mdb
+支持windows自身的大部分链接方式 比如这里用的是很古老的 ODBC JET 4.0
+同时也支持文本格式的数据，范例里面自带一个读取RSS的筛选器。刚开始的时候还以为能够支持 no sql 数据库这么吊，现在看来是不行的.</description>
     </item>
     
     <item>
       <title>Showcase</title>
-      <link>/showcase/</link>
+      <link>/python-test/showcase/</link>
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/showcase/</guid>
+      <guid>/python-test/showcase/</guid>
       <description>Header 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec interdum metus. Aenean rutrum ligula sodales ex auctor, sed tempus dui mollis. Curabitur ipsum dui, aliquet nec commodo at, tristique eget ante. Donec quis dolor nec nunc mollis interdum vel in purus. Sed vitae leo scelerisque, sollicitudin elit sed, congue ante. In augue nisl, vestibulum commodo est a, tristique porttitor est. Proin laoreet iaculis ornare. Nullam ut neque quam.</description>
     </item>
     

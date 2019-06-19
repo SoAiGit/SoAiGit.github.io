@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Seal Report</title>
-    <link>/python-test/posts/</link>
-    <description>Recent content in Posts on Seal Report</description>
+    <title>BI on Seal Report</title>
+    <link>/python-test/tags/bi/</link>
+    <description>Recent content in BI on Seal Report</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jun 2019 23:03:59 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0800</lastBuildDate>
     
-	<atom:link href="/python-test/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/python-test/tags/bi/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>windows用户在 htdigest 认证模式下，域怎么填</title>
-      <link>/python-test/posts/htdigest/</link>
-      <pubDate>Sun, 16 Jun 2019 23:03:59 +0800</pubDate>
-      
-      <guid>/python-test/posts/htdigest/</guid>
-      <description>正在搞鼓一个 web server, 需要在底层用到用户认证，我选择 linux 下面的 htdigest 认证标准；据说它只发送hash值 很难破译
-但是遇到个小问题 认证需要提交我的域 我的个人电脑并没有加入域 认证失败
-不管是留空还是乱填个 QQ.COM 都没用
-后来换成IE再去试 提示我是 mydomain.com 按照这个来生产 htdigest 文件才算通过了。</description>
-    </item>
     
     <item>
       <title>第二章 基础图表</title>
@@ -40,6 +28,23 @@
  为了能够一步一步讲解制作过程，我们去把默认的设置都删掉，把Views - View 下面的都删掉
  右键点击 View 建立一个数据模型的视图
  点击新出现的 Views - View - Model 给它改个新名字 业绩视图</description>
+    </item>
+    
+    <item>
+      <title>Seal Report 学习笔记</title>
+      <link>/python-test/about/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/python-test/about/</guid>
+      <description>Hi there 无意中看见一款自助式 BI， C# 开发 而且是开源、免费。
+安装包只有15兆，.NET 库 另算。但运行起来已经是飞快的了；渲染方面，默认只配给你HTML，其他的都是商业产品，没法配。
+可以支持PDF EXCEL 等格式。感觉极好！
+所以我决定把学习的过程记录下来。
+ 该软件给我的初步感觉，上手比 tableau 难很多，那个东西我不看指南都能搞定。 如果你不介意用破解软件，那么tableau真的很好。
+Seal Report 不是一个面向办公室人员的软件，对新手并不友好；它更加适合开发人员，尤其对数据库领域有比较高的要求。
+然后让熟悉业务的人来给你提要求，这样才能做出高质量的报表，否则还不如用 EXCEL
+最后，这个东西还支持定时器，可以让你稳定更新 HTML 文件； 那么，配合web server，可以实现定时更新并分享。
+以上就是我的初步感受。</description>
     </item>
     
     <item>

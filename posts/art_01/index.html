@@ -2,65 +2,77 @@
 <html lang="en">
 <head>
   
-    <title>新文章测试 :: Terminal — A simple, retro theme for Hugo</title>
+    <title>第二章 基础图表 :: Seal Report — 自学笔记</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="用Hugo做了个静态blog；自己做的一些python学习片段 存放在 PYTHON 目录下； 其他文件全是HTML BLOG。
- 01 XLSX 的读写
-为了在windows下面使用彩色字符，需要安装 colorama 库，这个库跟excel无关
- 02 Send mail
-python 3 的默认库自带有 mail client，如果没有安装则不能发邮件
-  "/>
+<meta name="description" content="该软件自带许多范例但是我们不管它，直接自己开个新的空白文件
+数据源已经在 Seal Server Manager 里面设置好了 它给我们设置了两个数据源 我也不知道该怎么删掉一个 （RSS的那个已经失效了）
+还是老规矩使用北风公司的数据就好了 我们直接开始搞吧
+ 右键点击 RRS no sql source 删除， 我们不需要这个数据源 要建立图表 首先要有数据模型 这是告诉数据库 我们要如何地显示数据 现在我们要考核员工的业务能力 那么肯定是要看到每一个员工的数据 不能跟别人重叠 然后指标是营业额(历年来的总和) 同时我还想看到他们的成绩按每年来划分，好让我知道他们那一年最给力，现在是进步了还是退步了 这是很简单的报表要求 很明显 重叠式柱图是最直观的 一共有上面描述的三个维度 在左边的 树状栏 ，我们选择 Models &amp;ndash; model, 然后我们给它换个名字 鼠标左键点一下即可
+ 接着去 clause 栏，找到我们想要的数据 并拖到 elements 栏中
+ 员工的姓名是我们需要分开统计的的， 拖过去ROW栏
+ 营业额(order details &amp;ndash; amount)是核心数据 所以拖入DATA栏
+ 业务时间是用来分割营业额的 所以拖入COL栏
+ 为了能够一步一步讲解制作过程，我们去把默认的设置都删掉，把Views - View 下面的都删掉
+ 右键点击 View 建立一个数据模型的视图
+ 点击新出现的 Views - View - Model 给它改个新名字 业绩视图"/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="/posts/art_01/" />
+<link rel="canonical" href="/python-test/posts/art_01/" />
 
 
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/python-test/assets/style.css">
 
-  <link rel="stylesheet" href="/assets/green.css">
-
-
-
-<link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/python-test/assets/green.css">
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
 
-<link rel="shortcut icon" href="/img/favicon/green.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/python-test/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="/python-test/img/favicon/green.png">
 
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="新文章测试 :: Terminal — A simple, retro theme for Hugo" />
-<meta name="twitter:description" content="用Hugo做了个静态blog；自己做的一些python学习片段 存放在 PYTHON 目录下； 其他文件全是HTML BLOG。
- 01 XLSX 的读写
-为了在windows下面使用彩色字符，需要安装 colorama 库，这个库跟excel无关
- 02 Send mail
-python 3 的默认库自带有 mail client，如果没有安装则不能发邮件
-  " />
-<meta name="twitter:site" content="/" />
+<meta name="twitter:title" content="第二章 基础图表 :: Seal Report — 自学笔记" />
+<meta name="twitter:description" content="该软件自带许多范例但是我们不管它，直接自己开个新的空白文件
+数据源已经在 Seal Server Manager 里面设置好了 它给我们设置了两个数据源 我也不知道该怎么删掉一个 （RSS的那个已经失效了）
+还是老规矩使用北风公司的数据就好了 我们直接开始搞吧
+ 右键点击 RRS no sql source 删除， 我们不需要这个数据源 要建立图表 首先要有数据模型 这是告诉数据库 我们要如何地显示数据 现在我们要考核员工的业务能力 那么肯定是要看到每一个员工的数据 不能跟别人重叠 然后指标是营业额(历年来的总和) 同时我还想看到他们的成绩按每年来划分，好让我知道他们那一年最给力，现在是进步了还是退步了 这是很简单的报表要求 很明显 重叠式柱图是最直观的 一共有上面描述的三个维度 在左边的 树状栏 ，我们选择 Models &amp;ndash; model, 然后我们给它换个名字 鼠标左键点一下即可
+ 接着去 clause 栏，找到我们想要的数据 并拖到 elements 栏中
+ 员工的姓名是我们需要分开统计的的， 拖过去ROW栏
+ 营业额(order details &amp;ndash; amount)是核心数据 所以拖入DATA栏
+ 业务时间是用来分割营业额的 所以拖入COL栏
+ 为了能够一步一步讲解制作过程，我们去把默认的设置都删掉，把Views - View 下面的都删掉
+ 右键点击 View 建立一个数据模型的视图
+ 点击新出现的 Views - View - Model 给它改个新名字 业绩视图" />
+<meta name="twitter:site" content="/python-test" />
 <meta name="twitter:creator" content="So Ai" />
 <meta name="twitter:image" content="">
 
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="新文章测试 :: Terminal — A simple, retro theme for Hugo">
-<meta property="og:description" content="用Hugo做了个静态blog；自己做的一些python学习片段 存放在 PYTHON 目录下； 其他文件全是HTML BLOG。
- 01 XLSX 的读写
-为了在windows下面使用彩色字符，需要安装 colorama 库，这个库跟excel无关
- 02 Send mail
-python 3 的默认库自带有 mail client，如果没有安装则不能发邮件
-  " />
-<meta property="og:url" content="/posts/art_01/" />
-<meta property="og:site_name" content="新文章测试" />
+<meta property="og:title" content="第二章 基础图表 :: Seal Report — 自学笔记">
+<meta property="og:description" content="该软件自带许多范例但是我们不管它，直接自己开个新的空白文件
+数据源已经在 Seal Server Manager 里面设置好了 它给我们设置了两个数据源 我也不知道该怎么删掉一个 （RSS的那个已经失效了）
+还是老规矩使用北风公司的数据就好了 我们直接开始搞吧
+ 右键点击 RRS no sql source 删除， 我们不需要这个数据源 要建立图表 首先要有数据模型 这是告诉数据库 我们要如何地显示数据 现在我们要考核员工的业务能力 那么肯定是要看到每一个员工的数据 不能跟别人重叠 然后指标是营业额(历年来的总和) 同时我还想看到他们的成绩按每年来划分，好让我知道他们那一年最给力，现在是进步了还是退步了 这是很简单的报表要求 很明显 重叠式柱图是最直观的 一共有上面描述的三个维度 在左边的 树状栏 ，我们选择 Models &amp;ndash; model, 然后我们给它换个名字 鼠标左键点一下即可
+ 接着去 clause 栏，找到我们想要的数据 并拖到 elements 栏中
+ 员工的姓名是我们需要分开统计的的， 拖过去ROW栏
+ 营业额(order details &amp;ndash; amount)是核心数据 所以拖入DATA栏
+ 业务时间是用来分割营业额的 所以拖入COL栏
+ 为了能够一步一步讲解制作过程，我们去把默认的设置都删掉，把Views - View 下面的都删掉
+ 右键点击 View 建立一个数据模型的视图
+ 点击新出现的 Views - View - Model 给它改个新名字 业绩视图" />
+<meta property="og:url" content="/python-test/posts/art_01/" />
+<meta property="og:site_name" content="第二章 基础图表" />
 <meta property="og:image" content="">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2019-06-11 23:09:18 &#43;0800 CST" />
+<meta property="article:published_time" content="2019-06-13 00:00:00 &#43;0800 CST" />
 
 
 
@@ -81,7 +93,7 @@ python 3 的默认库自带有 mail client，如果没有安装则不能发邮�
   <header class="header">
   <div class="header__inner">
     <div class="header__logo">
-      <a href="/">
+      <a href="/python-test">
   <div class="logo">
     So Ai
   </div>
@@ -96,11 +108,11 @@ python 3 的默认库自带有 mail client，如果没有安装则不能发邮�
     
       
         
-          <li><a href="/about">About</a></li>
+          <li><a href="/python-test/about">初衷</a></li>
         
       
         
-          <li><a href="/showcase">Showcase</a></li>
+          <li><a href="/python-test/showcase">格式范例</a></li>
         
       
       
@@ -110,11 +122,11 @@ python 3 的默认库自带有 mail client，如果没有安装则不能发邮�
   <ul class="menu__inner menu__inner--mobile">
     
       
-        <li><a href="/about">About</a></li>
+        <li><a href="/python-test/about">初衷</a></li>
       
     
       
-        <li><a href="/showcase">Showcase</a></li>
+        <li><a href="/python-test/showcase">格式范例</a></li>
       
     
   </ul>
@@ -128,10 +140,10 @@ python 3 的默认库自带有 mail client，如果没有安装则不能发邮�
     
 <div class="post">
   <h1 class="post-title">
-    <a href="/posts/art_01/">新文章测试</a></h1>
+    <a href="/python-test/posts/art_01/">第二章 基础图表</a></h1>
   <div class="post-meta">
     <span class="post-date">
-      2019-06-11
+      2019-06-13
     </span>
     
     <span class="post-author">::
@@ -143,7 +155,7 @@ python 3 的默认库自带有 mail client，如果没有安装则不能发邮�
   
   <span class="post-tags">
     
-    #<a href="/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/">未分类</a>&nbsp;
+    #<a href="/python-test/tags/bi/">BI</a>&nbsp;
     
   </span>
   
@@ -151,14 +163,70 @@ python 3 的默认库自带有 mail client，如果没有安装则不能发邮�
   
 
   <div class="post-content">
-    <p>用Hugo做了个静态blog；自己做的一些python学习片段 存放在 <code>PYTHON</code> 目录下； 其他文件全是HTML BLOG。</p>
+    <p>该软件自带许多范例但是我们不管它，直接自己开个新的空白文件</p>
+
+<p>数据源已经在 <code>Seal Server Manager</code> 里面设置好了 它给我们设置了两个数据源 我也不知道该怎么删掉一个 （RSS的那个已经失效了）</p>
+
+<p>还是老规矩使用北风公司的数据就好了 我们直接开始搞吧</p>
 
 <ul>
-<li><p>01 XLSX 的读写<br />
-为了在windows下面使用彩色字符，需要安装 colorama 库，这个库跟excel无关</p></li>
+<li>右键点击 <code>RRS no sql source</code> 删除， 我们不需要这个数据源</li>
+<li>要建立图表 首先要有<code>数据模型</code> 这是告诉数据库 我们要如何地显示数据</li>
+<li>现在我们要考核员工的业务能力 那么肯定是要看到每一个员工的数据 不能跟别人重叠</li>
+<li>然后指标是营业额(历年来的总和)</li>
+<li>同时我还想看到他们的成绩按每年来划分，好让我知道他们那一年最给力，现在是进步了还是退步了</li>
+<li>这是很简单的报表要求 很明显 重叠式柱图是最直观的 一共有上面描述的三个维度</li>
 
-<li><p>02 Send mail<br />
-python 3 的默认库自带有 mail client，如果没有安装则不能发邮件</p></li>
+<li><p>在左边的 树状栏 ，我们选择 Models &ndash; model, 然后我们给它换个名字 鼠标左键点一下即可</p>
+
+<p><img src="../../C02_01.jpg" ></p></li>
+
+<li><p>接着去 clause 栏，找到我们想要的数据 并拖到 elements 栏中</p></li>
+
+<li><p>员工的姓名是我们需要分开统计的的， 拖过去ROW栏</p>
+
+<p><img src="../../C02_02.jpg" ></p></li>
+
+<li><p>营业额(order details &ndash; amount)是核心数据 所以拖入DATA栏</p></li>
+
+<li><p>业务时间是用来分割营业额的 所以拖入COL栏</p></li>
+
+<li><p>为了能够一步一步讲解制作过程，我们去把默认的设置都删掉，把Views - View 下面的都删掉</p></li>
+
+<li><p>右键点击 View 建立一个<code>数据模型的视图</code></p>
+
+<p><img src="../../C02_03.jpg" ></p></li>
+
+<li><p>点击新出现的 Views - View - Model 给它改个新名字 <code>业绩视图</code></p>
+
+<p><img src="../../C02_04.jpg" ></p></li>
+
+<li><p>在本文中 我们只需要一个二维表格、一个柱型图即可，所以删掉其他没用的 留下 <code>Data Table</code> 和 <code>Chart JS</code><br />
+这里我们可以很清晰地看到我们的图表LayOut结构是 一个大容器包含了两个物件 一个是二维表 另一个是图表(使用了 Chart Js 这个工具)<br />
+我们可以用鼠标拖拉它们，改变他们在容器中的先后位置 在本图中 Chart JS 排在上面，意味着等会渲染的时候 柱形图会排在二维表上面</p>
+
+<p><img src="../../C02_05.jpg" ></p></li>
+
+<li><p>由于我们要以年份来分割业绩 所以我们要告诉系统 如何分割，默认是 并排式，但我们需要是重叠式</p>
+
+<p><img src="../../C02_06.jpg" ><br />
+我们在 chart js 上选择 <code>重叠模式</code> 即可</p>
+
+<p><img src="../../C02_07.jpg" ></p></li>
+
+<li><p>快要完成了，我们现在去 elements 栏 里面的 DATA栏；我们刚才把营业额放了进来的<br />
+我们要告诉系统，这个数据 我想用 chart jS 来渲染；就是我们之前在视图中给加进去还改了重叠式的 chart jS<br />
+点击 amount , 最右边的属性栏 可以找到 chart 的设置，图表设置成 柱形图 就可以了。</p>
+
+<p><img src="../../C02_08.jpg" ><br />
+在复杂的报表里面，我们会有多个数据源，多个需要关注的数据，要以各种不同的方式体现出来，我们是可以设置多个图表式样的，它们会独立存在</p></li>
+
+<li><p>然后去 员工 那里，把他设置成横坐标<br />
+<img src="../../C02_09.jpg" ></p></li>
+
+<li><p>最后去 年份 哪里把坐标设置成 纵坐标 以配合我们想要的重叠效果；</p></li>
+
+<li><p>很简单 对不？ 现在我们点击 Excute 来渲染我们的图表就行了 好好欣赏你的第一个数据挖掘图表 也就是所谓的 <code>BI</code>，我们马上就发现 <code>Dodsworth</code> 的进步非常明显 值得培养；而 <code>Peacock</code> 则是全场最佳销售员</p></li>
 </ul>
 
   </div>
@@ -171,10 +239,17 @@ python 3 的默认库自带有 mail client，如果没有安装则不能发邮�
     </div>
     <div class="pagination__buttons">
       
+      <span class="button previous">
+        <a href="/python-test/posts/htdigest/">
+          <span class="button__icon">←</span>
+          <span class="button__text">windows用户在 htdigest 认证模式下，域怎么填</span>
+        </a>
+      </span>
+      
       
       <span class="button next">
-        <a href="/posts/hello/">
-          <span class="button__text">Hello Friend</span>
+        <a href="/python-test/posts/hello/">
+          <span class="button__text">第一章 下载和安装</span>
           <span class="button__icon">→</span>
         </a>
       </span>
@@ -193,16 +268,11 @@ python 3 的默认库自带有 mail client，如果没有安装则不能发邮�
     <footer class="footer">
   <div class="footer__inner">
     
-      <div class="copyright">
-        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
-      </div>
-    
   </div>
 </footer>
 
-<script src="/assets/main.js"></script>
-<script src="/assets/prism.js"></script>
+<script src="/python-test/assets/main.js"></script>
+<script src="/python-test/assets/prism.js"></script>
 
 
 
